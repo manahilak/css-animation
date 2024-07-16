@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(195, 189, 189);
+}
+.h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.container {
+  background-color: pink;
+  height: 400px;
+  width: 400px;
+  margin: 50px auto;
+}
+.div1 {
+  font-size: 19px;
+  font-weight: 600;
+
+  text-align: center;
+  padding-top: 5rem;
+  background-color: yellow;
+  height: 50%;
+  width: 50%;
+  transition: transform 1s linear;
+}
+.container:hover .div1 {
+  background-color: blue;
+  transform: translateX(100%);
+}
+.container2 {
+  background-color: blue;
+  height: 400px;
+  width: 400px;
+  margin: 150px auto;
+}
+.div2 {
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 5rem;
+  background-color: red;
+  border-radius: 50%;
+  height: 50%;
+  width: 50%;
+}
+.container2:hover .div2 {
+  animation: left-to-right 1s ease-in forwards;
+}
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.button {
+  position: relative;
+  background-color: black;
+  border: none;
+  font-size: 28px;
+  color: #ffffff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  margin-left: 290px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button:after {
+  content: "";
+  background: gray;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.btn1:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn1:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.btn2 {
+  background-color: white;
+  color: black;
+}
+.btn2:hover {
+  box-shadow: 0 5px #666;
+  transform: translateY(-5px);
+}
